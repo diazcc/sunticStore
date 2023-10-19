@@ -1,0 +1,31 @@
+.cardProduct{
+  width: max-content;
+  max-width: 10rem;
+  padding: 1rem;
+  background: #ffffff3d;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .3rem;
+  transition: ease-out .2s;
+  &:hover{
+    background: #ffffff4a;
+  }
+  .imgProduct{
+    max-width: 9.5rem;
+    height: 8rem;
+    object-fit: contain;
+  }
+
+  .buttonAddProduct{
+    background-color: #ffee00;
+    color: black;
+    font-weight: bolder;
+    border: none;
+    padding: .5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,6 @@
+<i class="cardProduct" >
+  <img [src]="dataProduct.urlImg" alt="" class="imgProduct" loading="lazy">
+  <p class="nameProduct">{{dataProduct.name}}</p>
+  <p class="priceProduct">$ {{dataProduct.price}}</p>
+  <button class="buttonAddProduct" (click)="addToCart(dataProduct)">Añadir al carro</button>
+</i>

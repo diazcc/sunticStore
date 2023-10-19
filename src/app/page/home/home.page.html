@@ -1,0 +1,28 @@
+<app-shopping-cart [openCart]="openCart" [count]="count"></app-shopping-cart>
+<app-list-products-cart [classCart]="classCart" [dataCartProduct]="shoppingCart" ></app-list-products-cart>
+<main class="main">
+  <header class="header">
+    <img src="/assets/img/logo.webp" alt="" class="logo">
+    <ul class="contentSearch">
+      <input type="text" class="searchProduct" placeholder="Buscar producto">
+      <img src="/assets/svg/search.svg" alt="" class="logoSearch">
+    </ul>
+  </header>
+
+  <section class="wrapper">
+   <h1>Tienda de productos</h1>
+    <ul class="listAllProducts">
+      <app-card-product
+       class="cardProduct"
+       *ngFor="let product of allProducts"
+       [dataProduct]="product"
+       (dataCartEmitter)="getSelectedProduct($event)"
+      ></app-card-product>
+
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <h2 class="descriptionFooter">Desarrollado por: Andres Diaz Castillo - diazccx@gmail.com</h2>
+  </footer>
+</main>

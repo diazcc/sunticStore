@@ -1,0 +1,32 @@
+.shoppingCart{
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.3rem;
+  right: 1rem;
+  bottom: 3rem;
+  margin: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  .counter{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: red;
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    justify-content: center;
+    position: absolute;
+    top: -.4rem;
+    left: -.4rem;
+  }
+  .logoCart{
+
+  }
+}
