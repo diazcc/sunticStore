@@ -1,12 +1,12 @@
 <section [class]="'contentListCart contentListCart--'+classCart" id="outsideCart">
   <aside class="listCart">
     <h3 class="titleCart">Carrito</h3>
-    <p class="totalPrice">Total: $222</p>
+    <p class="totalPrice">Total: ${{totalPrice}}</p>
     <ul class="products">
-      <li class="card" *ngFor="let product of dataCartProduct">
-          <img [src]="product.urlImg" alt="" class="imgProduct">
-          <p class="price txtBlack">$ {{product.price}}</p>
-          <button class="deleteProduct" (click)="deleteProduct()">Eliminar</button>
+      <li class="card" *ngFor="let product of dataCartProduct; let i = index"><!-- gracias a las directivas de angular, se puede recorrer el array de todos los productos selecionados -->
+        <img [src]="product.urlImg" alt="" class="imgProduct">
+        <p class="price txtBlack">$ {{product.price}}</p>
+        <button class="deleteProduct" (click)="deleteProduct(i)">Eliminar</button>
       </li>
     </ul>
   </aside>

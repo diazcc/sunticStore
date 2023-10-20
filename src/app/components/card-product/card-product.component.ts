@@ -15,7 +15,7 @@ export class CardProductComponent {
     price : 0
   }
 
-  @Input() addToCart (product:any){
+  @Input() addToCart (product:any){//se emite el prodcuto seleccionado para poder utilizarlo en el padre
     this.dataCartEmitter.emit(product);
   }
 
