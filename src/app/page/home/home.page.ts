@@ -62,7 +62,6 @@ export class HomePage {
   }
 
   deleteProduct(product :any){//Se obtiene la posicion seleccionada en el carrito de compras y se elimina el producto del array shoppingCart
-    console.log(product);
     this.shoppingCart.splice(product, 1);//se elimina del shoppingCart
     this.count = this.shoppingCart.length //se actualiza el total de productos seleccionados
     this.getTotalPriceCart();
@@ -72,9 +71,7 @@ export class HomePage {
   getTotalPriceCart(){//funcion para obtener el total del carrito de compras
     let total = 0;
     this.shoppingCart.map((value:any)=>{
-      console.log(value.price);
       total = total +value.price;
-      console.log(total);
     })
     this.totalPrice = total;
   }
